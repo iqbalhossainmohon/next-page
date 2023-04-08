@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import BooksCard from '../BooksCard/BooksCard';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Books = () => {
+
+    const navigation = useNavigation()
+  console.log(navigation.state)
+  if (navigation.state === 'loading') {
+    return <LoadingSpinner/>
+  }
 
     // const [books, setBooks] = useState([]);
     // useEffect( ()=>{

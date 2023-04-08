@@ -51,7 +51,7 @@ const BookDetails = () => {
               </>
             ) : (
               <>
-                <p className=' text-gray-900'>{desc}.....</p>
+                <p className=' text-gray-900'>{desc}</p>
                 <span
                   className='cursor-pointer text-blue-600 '
                   onClick={() => setFold(!fold)}
